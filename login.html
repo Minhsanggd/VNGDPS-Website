@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to VNGDPS.</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+          body {
+  margin: 0;
+}
+  .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            position: relative;
+        }
+       .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+  .login-section {
+    text-align: center;
+    padding: 5rem;
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-content button, .modal-content a{
+    width: 150px;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+.modal-content #closeModal{
+    border: none;
+}
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.login-buttons .download-button {
+    width: 200px;
+    max-width: 100%;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="tools.html">Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <h2>Đăng nhập VNGDPS</h2>
+            <div class="login-buttons">
+              <a href="https://vngdps.ps.fhgdps.com/dashboard/login.php" class="download-button green" target="_blank">Login</a>
+              <a href="https://vngdps.ps.fhgdps.com/register.php" class="download-button green" target="_blank">Register</a>
+            </div>
+            <p><a href="#forgot" id="forgotPassword" style="color: green;">Quên mật khẩu?</a></p>
+
+            <div id="myModal" class="modal">
+               </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 VNGDPS</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("forgotPassword");
+        var span = document.getElementsByClassName("close")[0];
+        var closebtn = document.getElementById("closeModal")
+        btn.onclick = function() {
+            modal.style.display = "block";
+            modal.innerHTML = `
+            <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Quên mật khẩu</h2>
+                    <p>Bạn quên mật khẩu? Contact MinhSangGD trên Discord để được hỗ trợ!</p>
+                    <a href="https://discord.gg/HwChaCEKTF" class="download-button green" target="_blank">Contact</a>
+                    <button class="download-button green" id="closeModal">Đóng</button>
+
+                </div>
+            `;
+            span = document.getElementsByClassName("close")[0];
+            closebtn = document.getElementById("closeModal")
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            closebtn.onclick = function(){
+                modal.style.display = "none";
+            }
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

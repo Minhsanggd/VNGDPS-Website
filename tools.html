@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công cụ VNGDPS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+  margin: 0;
+}
+        .tools-section {
+            text-align: center;
+            padding: 5rem;
+        }
+
+        .tools-buttons {
+            display: grid; /* Sử dụng grid layout */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tự động chia cột */
+            grid-gap: 20px; /* Khoảng cách giữa các nút */
+            justify-content: center; /* Canh giữa theo chiều ngang */
+        }
+        .tools-buttons .download-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="tools.html">Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tools-section">
+            <h2>Công cụ VNGDPS</h2>
+            <div class="tools-buttons">
+                <a href="https://vngdps.ps.fhgdps.com/dashboard" class="download-button green" target="_blank">Account Manager</a>
+                <a href="https://vngdps.ps.fhgdps.com/dashboard" class="download-button green" target="_blank">Dashboard</a>
+                <a href="https://vngdps.ps.fhgdps.com/browser" class="download-button green" target="_blank">Browser</a>
+                <a href="coming.html" class="download-button green" target="_blank">Demon List</a>
+                <a href="https://discord.gg/HwChaCEKTF" class="download-button green" target="_blank">Discord</a>
+                <a href="https://m.me/j/AbbOBgD7nl2w2dpa/" class="download-button green" target="_blank">Messenger Chat</a>
+                <a href="https://www.facebook.com/groups/577671894660029/?ref=share" class="download-button green" target="_blanm">Facebook Group</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 VNGDPS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

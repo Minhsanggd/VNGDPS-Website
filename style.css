@@ -1,0 +1,227 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #212529; /* Màu đen đậm hơn */
+    padding: 0.5rem 0; /* Giảm padding trên dưới */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: box-shadow 0.3s ease; /* Thêm transition cho box-shadow */
+}
+.header-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.active {
+    transform: rotate(90deg);
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.hamburger .bar{
+    background-color: #fff;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #212529;
+    width: 100%;
+    text-align: center;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-menu.active {
+    display: flex;
+    opacity: 1;
+    max-height: 500px;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    user-select: none;
+}
+
+.download-button:active {
+    transform: scale(0.95);
+    -webkit-tap-highlight-color: transparent;
+}
+.download-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ */
+    transform: translateY(-2px); /* Nhấc nhẹ lên trên */
+}
+
+.download-button.green {
+    background-color: #28a745;
+}
+.download-button.green:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ */
+    transform: translateY(-2px); /* Nhấc nhẹ lên trên */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.download-section{
+    text-align: center;
+    padding: 5rem;
+}
+/* CSS cho modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-content button, .modal-content a{
+    width: 150px;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.modal-content #closeModal{
+    border: none;
+}
+.login-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.login-buttons .download-button{
+  width: 200px;
+  max-width: 100%;
+  text-align: center;
+}
+.tools-section {
+            text-align: center;
+            padding: 5rem;
+        }
+
+        .tools-buttons {
+            display: grid; /* Sử dụng grid layout */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tự động chia cột */
+            grid-gap: 20px; /* Khoảng cách giữa các nút */
+            justify-content: center; /* Canh giữa theo chiều ngang */
+        }
+        .tools-buttons .download-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+        }
