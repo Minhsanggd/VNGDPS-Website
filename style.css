@@ -5,12 +5,12 @@ body {
 }
 
 header {
-    background-color: #212529; /* Màu đen đậm hơn */
-    padding: 0.5rem 0; /* Giảm padding trên dưới */
+    background-color: #212529;
+    padding: 0.5rem 0;
     position: fixed;
     width: 100%;
     z-index: 100;
-    transition: box-shadow 0.3s ease; /* Thêm transition cho box-shadow */
+    transition: box-shadow 0.3s ease;
 }
 .header-shadow {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -94,10 +94,6 @@ header {
 }
 
 @media (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-
     .nav-menu {
         display: flex;
         flex-direction: row;
@@ -128,16 +124,16 @@ header {
     -webkit-tap-highlight-color: transparent;
 }
 .download-button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ */
-    transform: translateY(-2px); /* Nhấc nhẹ lên trên */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 .download-button.green {
     background-color: #28a745;
 }
 .download-button.green:hover{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ */
-    transform: translateY(-2px); /* Nhấc nhẹ lên trên */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 footer {
@@ -152,7 +148,7 @@ footer {
     text-align: center;
     padding: 5rem;
 }
-/* CSS cho modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -214,10 +210,10 @@ footer {
         }
 
         .tools-buttons {
-            display: grid; /* Sử dụng grid layout */
+            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tự động chia cột */
-            grid-gap: 20px; /* Khoảng cách giữa các nút */
-            justify-content: center; /* Canh giữa theo chiều ngang */
+            grid-gap: 20px;
+            justify-content: center;
         }
         .tools-buttons .download-button{
             display: flex;
