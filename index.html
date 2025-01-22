@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNGDPS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="tools.html">Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Chào mừng đến với VNGDPS</h1>
+            <p>Máy chủ Geometry Dash riêng dành cho người Việt.</p>
+            <a href="download.html" class="download-button" id="loading-link">Download</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 VNGDPS</p>
+    </footer>
+
+    <script src="script.js"></script>
+<style>
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-spinner {
+            border: 10px solid #f3f3f3;
+            border-top: 10px solid #00ff8e;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: loading-spin 1.2s linear infinite;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes loading-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+    <script>
+        document.getElementById('loading-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('loading-overlay').style.display = 'flex';
+            setTimeout(function() {
+                window.location.href = event.target.href;
+                document.getElementById('my-loading-overlay').style.display = 'none';
+            }, 200);
+        });
+    </script>
+</body>
+</html>
