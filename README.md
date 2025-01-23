@@ -6,9 +6,11 @@
 ## Main Website:
 https://vngdps-website.vercel.app
 
-## *Dashboard:*
+## Dashboard:
 https://vngdps.ps.fhgdps.com/dashboard
 
 
 
-- Download **Source Code** Of Website: *https://github.com/Minhsanggd/VNGDPS-Website/archive/refs/heads/main.zip*
+- Download *Source Code* Of Website: https://github.com/Minhsanggd/VNGDPS-Website/archive/refs/heads/main.zip
+
+- Thats all :v
